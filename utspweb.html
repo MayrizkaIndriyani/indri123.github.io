@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html Lang="in">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA MENU</title>
+    <style>
+        .awal {
+            background-color: yellow;
+        }
+        ul li{
+            display: inline;
+            margin: 12px;
+            font-size: 30px;
+        }
+        #skill,#SF {
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #SF {
+            display: block;
+        }
+        ul li a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+        ul li a:hover{
+            color: black;
+            text-decoration: none;
+        }
+        img {
+            border-radius: 50%;
+            width: 180px;
+            height: 320px;
+            float: left;
+            border: 3px solid;
+        }
+        .konten {
+            text-align: center;
+            background-color: rgba(255, 255, 0, 0.6);
+        }
+        #garis {
+            border-bottom: 4px solid black;
+        }
+        .tugas_kuliah {
+            text-align: left;
+        }
+        ol li a{
+            text-decoration: none;
+        }
+        ol li a:hover {
+            color: black;
+        }
+        body {
+            background-image: url(bangtan.jpeg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        } 
+        @media only screen and (max-width:450px) {
+            ul li{
+                margin: 8px;
+                font-size: 20px;
+            }
+            #skill,#SF {
+                font-size: 13px;
+            }
+            img {
+                width: 117px;
+                height: 208px;
+            }
+            p, strong, h3 {
+                font-size: small;
+            }
+            #garis {
+                border-bottom: 2px solid black;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="awal">
+        <ul>
+            <li><a id="about" class="aktif" href="#">Tentang Saya</a></li>
+            <li><a id="kontak" class="aktif" href="#">Kontak</a></li>
+            <li><a id="tugas_kuliah" class="aktif" href="#">Tugas Kuliah</a></li>
+        </ul>
+    </div>
+    <div class="konten">
+        <div class="about">
+            <p id="garis"><img src="indri.jpeg">
+            <strong>Nama :</strong> Mayrizka Indriyani <br>
+            <strong>NIM :</strong> 41215563 <br>
+            <strong>Kelas :</strong> TI-2021-P1 <br>
+            <strong>Prodi :</strong> Teknik Informatika <br>
+            </p>
+            <p>Saya lulusan SMK TELEKOMUNIKASI BUDI ARTI, mengambil jurusan teknik
+            <br>Saya melanjutkan pemdidikan di perguruan tinggi <strong>STMIK IKMI Cirebon</strong>
+            <br>
+            <br>
+            Saya mengambil jurusan Teknik Informatika di perguruan tinggi, alasan saya mengambil jurusan ini karena menjadi programmer.
+            <br>
+            <br> Saya suka bermain basket dan Saya juga suka musik Kpop
+            </p>
+            <div class="skill">
+                <h3>Skill</h3>
+                <ul>
+                    <li id="skill">HTML</li>
+                    <li id="skill">CSS</li>
+                    <li id="skill">javaScript</li>
+                    <li id="skill">MikroTik</li>
+                    <li id="skill">Ms.Excel</li>
+                    <li id="skill">Github</li>
+                </ul>
+            </div>
+            <br>
+            <div class="serte">
+                <h3>Sertifikat</h3>
+                <ul>
+                    <li id="SF">IT-essential</li>
+                </ul>
+            </div>
+        </div>
+        <div class="kontak">
+            <p>&#9993; <a href="#">mayrizka.indriyani@gmail.com</a></p>
+            <p>&#128222; <a href="#">+62 895-3308-69172</a></p>
+        </div>
+        <div class="tugas_kuliah">
+            <h3>Tugas</h3>
+            <ol>
+                <li><a href="https://mayrizkaindriyani.github.io/indri123.github.io/indri">Tabel Sederhana</a></li>
+                <li><a href="https://mayrizkaindriyani.github.io/indri123.github.io/tabel%20css">Tabel CSS</a></li>
+                <li><a href="https://mayrizkaindriyani.github.io/indri123.github.io/Formulir">Formulir CSS</a></li>
+                <li><a href="https://mayrizkaindriyani.github.io/indri123.github.io/tabel%20teman%20terbaik">Tabel jquery</a></li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function (){
+            $('#about').click(function(){
+                $('.about').slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $('#kontak').click(function(){
+                $('.kontak').slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $('#tugas_kuliah').click(function(){
+                $('.tugas_kuliah').slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>
